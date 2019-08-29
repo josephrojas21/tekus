@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { CitiesRoutingModule } from './cities-routing.module';
 import { CitiesComponent } from './cities.component';
 import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     CitiesRoutingModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
     
     
   ]

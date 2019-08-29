@@ -1,4 +1,6 @@
+import { HttpPostService } from './../Services/http-post.service';
 import { Component, OnInit } from '@angular/core';
+
 export interface PeriodicElement {
   name: string;
   id: number;
@@ -29,9 +31,11 @@ export class CitiesComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(private get: HttpPostService) { }
 
   ngOnInit() {
+    this.get.getCities();
+    this.get.getDevices();
   }
 
 }
