@@ -1,2 +1,14 @@
-<app-navbar></app-navbar>
+<nav>
+    <div class="nav-wrapper">
+      <div>
+          <a href="#" class="brand-logo center">Patatas Air Quality</a>
+      </div>
+      <div>
+          <ul id="nav-mobile" class="right ">
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/cities']">Cities</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
 <router-outlet></router-outlet>
