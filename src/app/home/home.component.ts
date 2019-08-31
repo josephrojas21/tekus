@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
   normalDevices=0;
   emergencyDevices=0;
 
+  devices: any;
+
+
   constructor(private dataService: HttpPostService) { }
 
   ngOnInit() {
@@ -21,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.dataService.getDevices()  
       .subscribe(  
         x => {console.log(x);
-        const [cero,one,two,three] = x
+        this.devices = x;
         x.forEach(device => {
           if(device.AirQuality ===0){
             this.normalDevices++;
@@ -33,7 +36,6 @@ export class HomeComponent implements OnInit {
             this.emergencyDevices++;
           }
         })
-        
     },  
     error => {  
       console.log('There was an error while retrieving Devices!' + error);  

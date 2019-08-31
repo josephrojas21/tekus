@@ -4,7 +4,7 @@ html{
 
 .summary{
     background-color: white;
-    border-radius: 2%;
+    border-radius: 10px 10px 10px 10px;
     margin: 24px auto;
     padding-bottom: 0.5%;
     padding-left: 2%;
@@ -14,12 +14,14 @@ html{
     margin-right: 2.5%;
     background-color: rgba(190, 190, 190, 0.452);
     padding-bottom: 1%;
+    border-radius: 10px 10px 10px 10px;
 }
 
 
 #chip1{
     margin-left: 40%;
     background-color: red;
+    
 }
 
 #chip2{
@@ -29,4 +31,32 @@ html{
 #chip3{
     margin-left: 40%;
     background-color: green;
+}
+
+
+.devicesEmergency,.devicesAlert,.devicesNormal{
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    margin: 24px auto;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+}
+
+.dEmergency{
+    border: 1px solid red;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 4%;
+    margin-right: 4%;
+}
+
+.dAlert{
+    border: 1px solid yellow;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 4%;
+}
+
+.dNormal{
+    border: 1px solid green;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 4%;
 }
