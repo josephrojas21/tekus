@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { CitiesRoutingModule } from './cities-routing.module';
 import { CitiesComponent } from './cities.component';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableModule,MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     CitiesRoutingModule,
     MatTableModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    MatInputModule
     
   ]
 })

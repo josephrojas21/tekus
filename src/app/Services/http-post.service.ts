@@ -13,7 +13,7 @@ export class HttpPostService {
   
   urlCities = 'https://patatas-air.s3.amazonaws.com/cities'
   urlDevices = 'https://patatas-air.s3.amazonaws.com/devices'
-  citiesData: any[];
+ 
 
   constructor(private http: HttpClient) { }
 
@@ -25,13 +25,8 @@ export class HttpPostService {
 
   
 
-  getDevices(){
-    this.http.get(this.urlDevices).subscribe(data =>{
-      console.log(data);
-      
-    },(error)=>{
-      console.log(error);
-      
-    })
+  public getDevices():Observable<Cities[]> {
+    return  this.http.get<Cities[]>
+                    (this.urlCities);
   }
 }
