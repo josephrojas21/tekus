@@ -7,16 +7,33 @@ import { HttpPostService } from '../Services/http-post.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  alertDevices=0;
+  normalDevices=0;
+  emergencyDevices=0;
 
   constructor(private dataService: HttpPostService) { }
 
   ngOnInit() {
+    this.getDevices();
   }
 
-  renderDataTable() {  
-    this.dataService.getCities()  
+  getDevices() {  
+    this.dataService.getDevices()  
       .subscribe(  
-          x => {  
+        x => {console.log(x);
+        const [cero,one,two,three] = x
+        x.forEach(device => {
+          if(device.AirQuality ===0){
+            this.normalDevices++;
+          }
+          if(device.AirQuality === 1){
+            this.alertDevices++;
+          }
+          if(device.AirQuality===2){
+            this.emergencyDevices++;
+          }
+        })
+        
     },  
     error => {  
       console.log('There was an error while retrieving Devices!' + error);  

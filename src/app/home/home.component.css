@@ -4,11 +4,29 @@ html{
 
 .summary{
     background-color: white;
-    border-radius: 4%;
+    border-radius: 2%;
     margin: 24px auto;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
 }
 
-div{
-    border: 1px solid black;
-    
+.states{
+    margin-right: 2.5%;
+    background-color: rgba(190, 190, 190, 0.452);
+    padding-bottom: 1%;
+}
+
+
+#chip1{
+    margin-left: 40%;
+    background-color: red;
+}
+
+#chip2{
+    margin-left: 40%;
+    background-color: yellow;
+}
+#chip3{
+    margin-left: 40%;
+    background-color: green;
 }

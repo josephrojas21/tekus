@@ -3,18 +3,28 @@
     <div class="summary">
       <h5 class="grey-text">Resumen</h5>
       <div class="row">
-        <div class="col l3 col-sm-3 ">
-          <span>Emergencia</span>
+        <div class="col l2  s12 m3 center-align states ">
+          <span>Emergencia</span><br>
+          <mat-chip-list >
+            <mat-chip id="chip1" selected>{{emergencyDevices}}</mat-chip>
+          </mat-chip-list>
         </div>
-        <div class="col l3 col-sm-3">
-          <span>Alerta</span>
+        <div class="col l2 s12  m3 center-align states">
+          <span>Alerta</span><br>
+          <mat-chip-list>
+            <mat-chip id="chip2" selected>{{alertDevices}}</mat-chip>
+          </mat-chip-list>
         </div>
-        <div class="col l3 col-sm-3">
-          <span>Normal</span>
+        <div class="col l2 s12 m3 center-align states">
+          <span>Normal</span><br>
+          <mat-chip-list>
+            <mat-chip id="chip3" selected>{{normalDevices}}</mat-chip>
+          </mat-chip-list>
         </div>
       </div>
     </div>
 
+    
   </div>
   
 </html>
