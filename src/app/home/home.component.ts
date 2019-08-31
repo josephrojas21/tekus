@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpPostService } from '../Services/http-post.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: HttpPostService) { }
 
   ngOnInit() {
   }
+
+  renderDataTable() {  
+    this.dataService.getCities()  
+      .subscribe(  
+          x => {  
+    },  
+    error => {  
+      console.log('There was an error while retrieving Devices!' + error);  
+    });
+  }  
 
 }

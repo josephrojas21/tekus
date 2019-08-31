@@ -2,6 +2,7 @@ import { Cities } from './../models/cities';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Devices } from '../models/devices';
 
 
 
@@ -25,8 +26,8 @@ export class HttpPostService {
 
   
 
-  public getDevices():Observable<Cities[]> {
-    return  this.http.get<Cities[]>
-                    (this.urlCities);
+  public getDevices():Observable<Devices[]> {
+    return  this.http.get<Devices[]>
+                    (this.urlDevices);
   }
 }

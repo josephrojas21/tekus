@@ -1,0 +1,14 @@
+html{
+    background-color: rgb(190, 190, 190);
+}
+
+.summary{
+    background-color: white;
+    border-radius: 4%;
+    margin: 24px auto;
+}
+
+div{
+    border: 1px solid black;
+    
+}
