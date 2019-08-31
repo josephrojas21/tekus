@@ -11,19 +11,21 @@ export class HomeComponent implements OnInit {
   normalDevices=0;
   emergencyDevices=0;
 
-  devices: any;
+  devices: any =[];
+  cities: any = [];
 
 
   constructor(private dataService: HttpPostService) { }
 
   ngOnInit() {
     this.getDevices();
+    this.getCities();
   }
 
   getDevices() {  
     this.dataService.getDevices()  
       .subscribe(  
-        x => {console.log(x);
+        x => {
         this.devices = x;
         x.forEach(device => {
           if(device.AirQuality ===0){
@@ -39,6 +41,21 @@ export class HomeComponent implements OnInit {
     },  
     error => {  
       console.log('There was an error while retrieving Devices!' + error);  
+    });
+  }  
+
+  getCities() {  
+    this.dataService.getCities()  
+      .subscribe(  
+          x => {  
+            x.forEach(city => {
+              this.cities.push(city.Name)
+            })
+            console.log(this.cities);
+            
+  },  
+  error => {  
+    console.log('There was an error while retrieving Usuarios!' + error);  
     });
   }  
 
